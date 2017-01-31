@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+	<head>
+		<meta http-equiv="expires" content="0">
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" rel="prefetch" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="box01">
+			<div id="box02">
+				<h2>Choose pattern (very short [1s] record of vowel "i" *.wav file):</h2>
+				<form action="pattern" method=post enctype=multipart/form-data>
+				  <p><input type=file name=file>
+					 <input type=submit value=Upload>
+				</form>
+				
+				
+				<audio controls>
+				  <source src="pattern.wav" type="audio/wav">
+				  Your browser does not support the audio tag.
+				</audio>
+				<br>
+				<a href = "settings.html"> Next </a>
+			</div>
+		</div>
+	</body>
+</html>

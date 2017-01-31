@@ -1,0 +1,84 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+body {
+    background-color: lightblue;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+div {
+    color: navy;
+    margin-left: 20px;
+}
+p {
+    text-indent: 50px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.uppercase {
+    text-transform: uppercase;
+}
+
+p.lowercase {
+    text-transform: lowercase;
+}
+
+p.capitalize {
+    text-transform: capitalize;
+}
+
+a.butt:link, a.butt:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+a.butt:hover, a.butt:active {
+    background-color: red;
+    border-radius: 12px;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+div#box01 {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 0px;
+}
+div#box02 {
+    border: 1px solid #0044bb;
+    margin-left: -500px;
+    height: 800px;
+    width: 1000px;
+}
+div#animate {
+  width: 3px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  margin-left: 0px;
+}
+#container {
+  width: 1000px;
+  height: 50px;
+  position: relative;
+  background-image: url('out.png');
+  background-size:100% 100%;
+  margin-left: 0px;
+}
+#player {
+ width: 500px;
+
+}​
+

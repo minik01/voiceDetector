@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="expires" content="0">
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="box01">
+			<div id="box02">
+				Poniżej powinien znajdować się czarno-biały pasiasty obraz. Jasność każdego prążka oznacza podobieństwo do wzorca, czyli im więcej jasnych pasków i im bielsze są one, tym z większym prawdopodobieństwem można stwierdzić, że nagranie zawiera głos człowieka.
+				<div id="container">
+				
+				<div id="animate"></div>
+				</div>
+				
+				<audio id="player" no-controls>
+				  <source rel="prefetch" src="data.wav" type="audio/wav">
+				  Your browser does not support the audio tag.
+				</audio>
+
+
+				<button onclick="start()">Start</button>
+				<button onclick="pause()">Pause</button>
+				<button onclick="stop()">Stop</button>
+				<br>
+				<a href="start"> powrót </a>
+			</div>
+		</div>
+		
+		
+		<script>
+			var pl = document.getElementById("player"); 
+			function stop() {
+				pl.pause();
+				pl.currentTime=0;
+			}
+			function pause() {
+				pl.pause();
+			}
+			function start() {
+			  var elem = document.getElementById("animate");   
+			  var pos = 0;
+			  var id = setInterval(frame, 3);
+			  pl.play();
+			  function frame() {
+				if (pos == 1000) {
+				  clearInterval(id);
+				} else {
+				  pos = (pl.currentTime/pl.duration)*1000; 
+				  elem.style.left = pos + 'px'; 
+				}
+			  }
+			}
+		</script>
+	</body>
+</html>
